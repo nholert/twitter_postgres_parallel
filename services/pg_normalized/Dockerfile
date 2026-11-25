@@ -1,4 +1,4 @@
-FROM postgis/postgis
+FROM postgis/postgis:17-3.7
 
 RUN apt-get update && apt-get install -y \
     less \
