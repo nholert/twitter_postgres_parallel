@@ -5,7 +5,7 @@ files=$(find data/*)
 echo '================================================================================'
 echo 'load denormalized'
 echo '================================================================================'
-time for file in $files; do
+time for file in $files; do 
     echo
     unzip -p "$file" | sed 's/\\u0000//g' | PGPASSWORD=pass psql \
     -h localhost \
