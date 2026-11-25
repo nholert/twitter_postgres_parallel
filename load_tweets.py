@@ -404,7 +404,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # create database connection
-    engine = sqlalchemy.create_engine(args.db, connect_args={
+    engine = sqlalchemy.create_engine(args.db, future=True, connect_args={
         'application_name': 'load_tweets.py',
         })
     connection = engine.connect()
